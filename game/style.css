@@ -1,0 +1,31 @@
+/* Solmar City HUD + menus. Warm sunset palette, system fonts only. */
+html, body { margin: 0; height: 100%; overflow: hidden; background: #0e1420; font-family: Arial, Helvetica, sans-serif; }
+#game { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+.hidden { display: none !important; }
+#status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* --- HUD --- */
+#hud { position: fixed; inset: 0; pointer-events: none; color: #fff; z-index: 5; }
+#hud-top-left { position: absolute; top: 14px; left: 16px; }
+#hud-money { font-size: 26px; font-weight: bold; color: #7dff5f; text-shadow: 0 2px 4px rgba(0,0,0,0.7); }
+#hud-health { width: 180px; height: 12px; margin-top: 6px; background: rgba(0,0,0,0.55); border: 1px solid rgba(255,255,255,0.5); border-radius: 6px; overflow: hidden; }
+#hud-health-fill { height: 100%; width: 100%; background: #4ade80; }
+#hud-stars { position: absolute; top: 12px; right: 18px; font-size: 30px; letter-spacing: 4px; color: #ffd23e; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+#hud-objective { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); max-width: 46%; text-align: center; font-size: 17px; font-weight: bold; background: rgba(0,0,0,0.55); padding: 8px 14px; border-radius: 8px; }
+#hud-prompt { position: absolute; bottom: 92px; left: 50%; transform: translateX(-50%); font-size: 16px; background: rgba(0,0,0,0.6); padding: 7px 12px; border-radius: 8px; }
+#hud-speed { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); font-size: 30px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+#minimap { position: absolute; right: 16px; bottom: 16px; border: 2px solid rgba(255,255,255,0.65); border-radius: 8px; background: rgba(10,16,24,0.8); }
+#hud-banner { position: absolute; top: 32%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+#hud-banner-title { font-size: 44px; font-weight: bold; color: #ffd23e; text-shadow: 0 3px 8px rgba(0,0,0,0.9); letter-spacing: 2px; }
+#hud-banner-sub { font-size: 18px; margin-top: 8px; text-shadow: 0 2px 4px rgba(0,0,0,0.9); }
+
+/* --- Menus --- */
+#menu, #pause { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(160deg, rgba(20,10,40,0.55), rgba(255,122,61,0.35)); z-index: 10; }
+.menu-card { text-align: center; background: rgba(10,14,24,0.82); border: 1px solid rgba(255,210,62,0.5); border-radius: 16px; padding: 34px 44px; max-width: 560px; color: #fff; box-shadow: 0 12px 48px rgba(0,0,0,0.6); }
+.menu-card h1 { margin: 0 0 6px; font-size: 52px; letter-spacing: 4px; color: #ffd23e; text-shadow: 0 0 24px rgba(255,122,61,0.8); }
+.menu-card .tagline { color: #ffb14d; font-style: italic; margin: 0 0 14px; }
+.menu-card .story { font-size: 16px; line-height: 1.5; color: #e8e8e8; }
+.menu-card button { display: block; margin: 16px auto 0; padding: 14px 44px; font-size: 20px; font-weight: bold; letter-spacing: 2px; color: #1a1206; background: #ffd23e; border: none; border-radius: 10px; cursor: pointer; }
+.menu-card button:hover { background: #ffe14d; }
+.menu-card .controls { margin-top: 20px; font-size: 13px; color: #c9c9c9; line-height: 1.7; }
+.menu-card .controls b { color: #fff; }
